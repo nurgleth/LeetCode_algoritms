@@ -29,12 +29,16 @@ def restoreString(s, indices):
     string = ""
     for i, j in zip(indices, s):
         dicted[i] = j
-    print(dicted)
     for key in sorted(dicted.keys()):
         string += dicted[key]
     return string
 
 
-s = "codeleet"
-indices = [4, 5, 6, 7, 0, 2, 1, 3]
-print(restoreString(s, indices))
+def restoreString1(s: str, indices: list[int]) -> str:  # решение и без сортировки
+    m = {}
+    for i, j in zip(s, indices):
+        m[j] = i
+    out = ""
+    for i in range(len(s)):
+        out += m[i]
+    return out
