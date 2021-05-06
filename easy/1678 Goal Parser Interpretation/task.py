@@ -39,6 +39,11 @@ def interpret(command):
     return tmp
 
 
-command = "(al)G(al)()()G"
-
-print(interpret(command))
+def interpret1(command):
+    """
+    :type command: str
+    :rtype: str
+    """
+    s = command.replace("()", "o")
+    s = s.replace("(al)", "al")
+    return s
