@@ -30,9 +30,7 @@ def arrayStringsAreEqual(word1: list[str], word2: list[str]) -> bool:
         tmp_1 += i
     for j in word2:
         tmp_2 += j
-    if tmp_1 != tmp_2:
-        return False
-    return True
+    return tmp_1 == tmp_2
 
 
 def arrayStringsAreEqual1(word1: list[str], word2: list[str]) -> bool:
