@@ -40,3 +40,11 @@ def replaceDigits(s: str) -> str:
     return new_str
 
 
+def replaceDigits1(s: str) -> str:
+    res = ""
+    for char in s:
+        if not char.isdigit():
+            res += char
+        else:
+            res += chr(ord(res[-1]) + int(char))
+    return res
