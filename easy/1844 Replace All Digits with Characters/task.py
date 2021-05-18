@@ -31,11 +31,9 @@ def replaceDigits(s: str) -> str:
     abcd = "abcdefghijklmnopqrstuvwxyz"
     new_str = ""
     for i in range(len(s)):
-        tmp = []
         if s[i] in abcd:
             new_str += s[i]
         else:
-            tmp.append(s[i])
             new_str += abcd[abcd.find(s[i - 1]) + int(s[i])]
     return new_str
 
