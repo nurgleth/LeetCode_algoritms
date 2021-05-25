@@ -35,4 +35,7 @@ def sortSentence(s: str) -> str:
     return " ".join(i[:-1] for i in tmp)
 
 
-
+def sortSentence1(s: str) -> str:
+    tmp = s.split()
+    tmp.sort(key=lambda x: int(x[-1]))
+    return " ".join(i[:-1] for i in tmp)
